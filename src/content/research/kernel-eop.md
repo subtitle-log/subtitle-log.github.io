@@ -3,8 +3,8 @@ title: "윈도우 커널 Oneday EOP Root Cause 분석"
 summary: "HEVD와 공개 oneday를 따라가며 권한상승 취약점의 근본 원인을 분석하고, 재현과 막힌 지점까지 기록."
 date: 2026-11-07
 tags: ["PC / Kernel", "진행중"]
-draft: false
-featured: true
+draft: true
+featured: false
 category: Kernel
 ---
 

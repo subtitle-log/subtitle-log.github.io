@@ -3,7 +3,7 @@ title: "HEVD 분석 #1 Stack Buffer Overflow"
 summary: "커널 스택 오버플로우의 root cause와 익스 전략, 그리고 막힌 지점."
 date: 2026-11-08
 tags: ["HEVD", "Kernel"]
-draft: false
+draft: true
 category: Kernel
 ---
 
