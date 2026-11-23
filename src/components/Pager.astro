@@ -3,7 +3,7 @@ interface Props { listId: string; rowSel?: string; per?: number; }
 const { listId, rowSel = '.arow', per = 10 } = Astro.props;
 const pid = `pg-${listId}`;
 ---
-<nav class="pager" id={pid} aria-label="페이지 이동"></nav>
+<nav class="pager" id={pid} aria-label="Pagination"></nav>
 <script define:vars={{ listId, rowSel, per, pid }}>
   (function () {
     var list = document.getElementById(listId);

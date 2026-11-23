@@ -6,7 +6,7 @@ const posts = (await getAllPosts()).filter((p) => p.category === CATEGORY);
 const fmt = (d: Date) => `${d.getFullYear()}.${String(d.getMonth() + 1).padStart(2, '0')}.${String(d.getDate()).padStart(2, '0')}`;
 ---
 <Inner title="Tooling" center>
-  {posts.length === 0 && <p class="empty-note">아직 글이 없습니다.</p>}
+  {posts.length === 0 && <p class="empty-note">No posts yet.</p>}
   {posts.length > 0 && (
     <div class="archbar">
       <button type="button" class="sortbtn active" data-sort="newest">Newest</button>
@@ -27,7 +27,7 @@ const fmt = (d: Date) => `${d.getFullYear()}.${String(d.getMonth() + 1).padStart
       </a>
     ))}
   </div>
-  <nav class="pager" id="pager" aria-label="페이지 이동"></nav>
+  <nav class="pager" id="pager" aria-label="Pagination"></nav>
 
   <script is:inline>
     (function () {

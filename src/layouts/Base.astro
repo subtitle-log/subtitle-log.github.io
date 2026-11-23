@@ -8,7 +8,7 @@ export interface Props {
 }
 const {
   title,
-  description = '윈도우 커널과 시스템 취약점 분석. 연구와 공부를 기록합니다.',
+  description = 'Security research notes — vulnerabilities, reverse engineering, operating systems, and tools.',
   bodyClass = '',
   image,
 } = Astro.props;
@@ -48,7 +48,7 @@ const ogImage = new URL(image ?? base + 'og.png', site).href;
 <body class={bodyClass}>
   {isHome && (
   <div class="navwood">
-    <button class="navwood-trigger" type="button" aria-label="메뉴" aria-expanded="false">
+    <button class="navwood-trigger" type="button" aria-label="Menu" aria-expanded="false">
       <img class="navwood-sign" src={`${nav}/img/wood-sign.png`} alt="" />
       <span class="navwood-label">Menu</span>
     </button>

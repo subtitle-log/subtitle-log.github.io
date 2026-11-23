@@ -38,7 +38,7 @@ const fmt = (d: Date) => `${d.getFullYear()}.${String(d.getMonth() + 1).padStart
       <div class="search-results" id="searchResults"></div>
     </div>
 
-    <nav class="rack" id="categories" aria-label="메뉴">
+    <nav class="rack" id="categories" aria-label="Categories">
       {keys.map((k) => (
         <a class="peg" href={k.href} aria-label={k.label}>
           <span class="plate">
@@ -50,7 +50,7 @@ const fmt = (d: Date) => `${d.getFullYear()}.${String(d.getMonth() + 1).padStart
       ))}
     </nav>
 
-    <div class="scrollcue mono"><span>아래로</span><span class="chev"></span></div>
+    <div class="scrollcue mono"><span>Scroll</span><span class="chev"></span></div>
   </section>
 
   <script is:inline>
@@ -70,7 +70,7 @@ const fmt = (d: Date) => `${d.getFullYear()}.${String(d.getMonth() + 1).padStart
         <div class="ledger-frame" id="featured">
           <div class="sect-head"><span class="placard">Featured Posts</span></div>
           <div class="plist">
-            {featured.length === 0 && <div class="empty">아직 추천 글이 없습니다.</div>}
+            {featured.length === 0 && <div class="empty">No featured posts yet.</div>}
             {featured.map((p) => (
               <a href={p.href}>
                 <span class="phead"><span class="pt">{p.title}</span><span class="pd">{fmt(p.date)}</span></span>
@@ -83,7 +83,7 @@ const fmt = (d: Date) => `${d.getFullYear()}.${String(d.getMonth() + 1).padStart
         <div class="latest-wrap" id="latestWrap">
           <div class="sect-head"><span class="placard">Latest Entries</span></div>
           <div class="plist" id="latestList">
-            {latest.length === 0 && <div class="empty">아직 글이 없습니다.</div>}
+            {latest.length === 0 && <div class="empty">No posts yet.</div>}
             {latest.map((p, i) => (
               <a class="lrow" href={p.href} data-idx={i}>
                 <span class="phead"><span class="pt">{p.title}</span><span class="pd">{fmt(p.date)}</span></span>
@@ -116,7 +116,7 @@ const fmt = (d: Date) => `${d.getFullYear()}.${String(d.getMonth() + 1).padStart
         var hits = data.filter(function (p) {
           return p.t.toLowerCase().indexOf(q) > -1 || (p.c && p.c.toLowerCase().indexOf(q) > -1);
         }).slice(0, 7);
-        if (!hits.length) { box.innerHTML = '<div class="sr-empty">결과 없음</div>'; box.classList.add('open'); return; }
+        if (!hits.length) { box.innerHTML = '<div class="sr-empty">No results</div>'; box.classList.add('open'); return; }
         hits.forEach(function (p) {
           var a = document.createElement('a');
           a.href = p.h; a.className = 'sr-item';

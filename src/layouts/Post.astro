@@ -17,7 +17,7 @@ const toc = headings.filter((h) => h.depth >= 1 && h.depth <= 4);
   </article>
 
   {toc.length > 0 && (
-    <nav class="toc" aria-label="목차">
+    <nav class="toc" aria-label="Table of contents">
       {toc.map((h) => (
         <a href={`#${h.slug}`} class={`toc-d${h.depth}`}>{h.text}</a>
       ))}
