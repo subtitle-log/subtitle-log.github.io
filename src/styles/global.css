@@ -6,7 +6,7 @@
   --brass-hi:#f3e0a6; --brass:#c9a24b; --brass-lo:#8a6a28;
   --glow:#f0b964; --ink:#f1e8de; --ink-mid:#cbb4a4; --ink-dim:#9c8475;
   --line:rgba(201,163,90,.18); --card:rgba(255,240,224,.04);
-  --serif:"Cormorant Garamond","Noto Serif KR",Georgia,serif;
+  --serif:"Newsreader","Noto Serif KR",Georgia,serif;
   --engrave:"Cinzel",Georgia,serif;
   --sans:"IBM Plex Sans KR",system-ui,sans-serif;
   --mono:"IBM Plex Mono",ui-monospace,monospace;
@@ -212,6 +212,13 @@ body.inner{background:radial-gradient(70% 50% at 50% 0%, rgba(240,185,100,.08), 
 .prose code{font-family:var(--mono); font-size:.86em; background:rgba(201,163,90,.12); color:var(--ink); padding:.12em .4em; border-radius:.25em}
 .prose pre{background:#140509; border:1px solid var(--line); color:#e8dccb; padding:1.1rem 1.3rem; border-radius:.5rem; overflow-x:auto; font-size:.84rem; line-height:1.6}
 .prose pre code{background:none; padding:0; color:inherit}
+.prose table{width:100%; border-collapse:collapse; font-size:.92rem; margin-top:1.2rem}
+.prose thead th{font-weight:600; color:var(--ink); text-align:left; padding:.6rem .8rem; border-bottom:2px solid var(--brass-lo); background:rgba(201,163,90,.06)}
+.prose tbody td{padding:.55rem .8rem; border-bottom:1px solid var(--line); color:var(--ink-mid); vertical-align:top}
+.prose tbody tr:last-child td{border-bottom:none}
+.prose tbody tr:hover{background:rgba(255,240,224,.03)}
+.prose .table-wrap{overflow-x:auto; margin-top:1.2rem; border:1px solid var(--line); border-radius:.4rem}
+.prose .table-wrap table{margin-top:0}
 .prose img{max-width:100%; border-radius:.4rem}
 .prose hr{border:none; border-top:1px solid var(--line); margin:2rem 0}
 .inner-foot{border-top:1px solid var(--line); padding:2rem 0 3rem; text-align:center; color:var(--ink-dim); font-family:var(--mono); font-size:.76rem}
