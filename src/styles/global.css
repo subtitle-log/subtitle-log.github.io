@@ -55,7 +55,7 @@ html.anim-ready .curtain-img{transition:transform 1.5s cubic-bezier(.33,0,.2,1)}
 .curtain-img.right:hover{animation:swayR 1.3s ease}
 
 .sign{position:relative; z-index:4; text-align:center; margin-bottom:1.7rem}
-.sign h1{font-family:var(--serif); font-weight:600; font-size:clamp(2.4rem,6vw,3.8rem); color:var(--ink); letter-spacing:.02em; line-height:1.02; margin:.45rem 0 .35rem; text-shadow:0 2px 24px rgba(0,0,0,.5)}
+.sign h1{font-family:"Cormorant Garamond","Noto Serif KR",Georgia,serif; font-weight:600; font-size:clamp(2.4rem,6vw,3.8rem); color:var(--ink); letter-spacing:.02em; line-height:1.02; margin:.45rem 0 .35rem; text-shadow:0 2px 24px rgba(0,0,0,.5)}
 .sign .role{font-family:var(--engrave); font-size:.8rem; letter-spacing:.24em; color:var(--ink-mid); text-transform:uppercase}
 
 .rack{position:relative; display:flex; flex-wrap:wrap; justify-content:center; align-items:flex-start;
@@ -301,7 +301,7 @@ body.inner{background:radial-gradient(70% 50% at 50% 0%, rgba(240,185,100,.08), 
 .sr-empty{padding:.8rem 1.05rem; color:var(--ink-dim); font-family:var(--mono); font-size:.82rem; text-align:center}
 
 .toc{display:none; position:fixed; top:6.5rem; right:1.6rem; width:178px; max-height:calc(100vh - 9rem);
-  overflow-y:auto; z-index:5}
+  overflow-y:auto; z-index:5; opacity:0; transition:opacity .25s ease}
 .toc a{display:block; font-family:var(--sans); font-size:.78rem; line-height:1.35; color:var(--ink-dim);
   text-decoration:none; padding:.28rem 0; opacity:.68; transition:color .35s ease, opacity .35s ease}
 .toc a:hover{color:var(--ink-mid); opacity:1}
@@ -311,7 +311,7 @@ body.inner{background:radial-gradient(70% 50% at 50% 0%, rgba(240,185,100,.08), 
 .toc a.active{color:var(--brass-hi); opacity:1; font-weight:600}
 .toc::-webkit-scrollbar{width:4px}
 .toc::-webkit-scrollbar-thumb{background:rgba(201,163,90,.25); border-radius:2px}
-@media(min-width:1240px){ .toc{display:block} }
+@media(min-width:1240px){ .toc{display:block; opacity:1} }
 
 :root{
   --astro-code-color-text:#e9ddc9;

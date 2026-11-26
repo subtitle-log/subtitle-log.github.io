@@ -16,7 +16,7 @@ const keys = [
 const posts = await getAllPosts();
 const featured = posts.filter((p) => p.featured).slice(0, 3);
 const latest = posts;
-const searchData = posts.map((p) => ({ t: p.title, h: p.href, c: p.category }));
+const searchData = posts.map((p) => ({ t: p.title, h: p.href, c: p.category, g: (p.tags || []).join(' ') }));
 const fmt = (d: Date) => `${d.getFullYear()}.${String(d.getMonth() + 1).padStart(2, '0')}.${String(d.getDate()).padStart(2, '0')}`;
 ---
 <Base title="Subtitle Log - Security Research Notebook" bodyClass="desk">
@@ -114,7 +114,7 @@ const fmt = (d: Date) => `${d.getFullYear()}.${String(d.getMonth() + 1).padStart
         q = (q || '').trim().toLowerCase();
         if (!q) { box.classList.remove('open'); return; }
         var hits = data.filter(function (p) {
-          return p.t.toLowerCase().indexOf(q) > -1 || (p.c && p.c.toLowerCase().indexOf(q) > -1);
+          return p.t.toLowerCase().indexOf(q) > -1 || (p.c && p.c.toLowerCase().indexOf(q) > -1) || (p.g && p.g.toLowerCase().indexOf(q) > -1);
         }).slice(0, 7);
         if (!hits.length) { box.innerHTML = '<div class="sr-empty">No results</div>'; box.classList.add('open'); return; }
         hits.forEach(function (p) {

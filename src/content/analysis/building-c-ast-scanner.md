@@ -1,10 +1,10 @@
 ---
 title: "Building a C Vulnerability Scanner with AST Walking"
 summary: "Why regex grep is not enough for C static analysis, and how pycparser's AST lets you catch format string bugs, unchecked allocs, and command injection by walking the actual parse tree."
-date: 2026-11-26
+date: 2026-07-04
 tags: ["AST", "Static Analysis", "pycparser", "C"]
 draft: false
-featured: true
+featured: false
 category: Tooling
 ---
 
